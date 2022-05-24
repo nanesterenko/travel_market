@@ -1,6 +1,5 @@
 import datetime
 import logging
-import os
 import allure
 import pytest
 from selenium import webdriver

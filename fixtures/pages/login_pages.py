@@ -30,4 +30,3 @@ class LoginPage(BasePage):
     def get_event_text(self):
         message = self.text(locator=self.ERROR_MSG)
         return message
-
