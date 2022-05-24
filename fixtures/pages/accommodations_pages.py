@@ -1,6 +1,5 @@
 import logging
 import random
-
 from selenium.webdriver.common.by import By
 from fixtures.pages.base_pages import BasePage
 

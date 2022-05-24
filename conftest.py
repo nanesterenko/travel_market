@@ -1,9 +1,12 @@
 import datetime
 import logging
+import os
+import allure
 import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
+
 from fixtures.app import Application
 from models.register import RegisterUserModel
 
@@ -27,12 +30,16 @@ def pytest_runtest_makereport(item):
     if rep.when == "call" and rep.failed:
         try:
             if "app" in item.fixturenames:
-                web_driver = item.funcargs["app"]
+                web_driver = item.funcargs["app"].driver
             else:
                 logger.error("Fail to take screen-shot")
                 return
+            web_driver.get_screenshot_as_png()
+            allure.attach(
+                web_driver.get_screenshot_as_png(),
+                name=f'screen_{datetime.datetime.now()}',
+                attachment_type=allure.attachment_type.PNG)
             logger.info("Screen-shot done")
-            web_driver.driver.save_screenshot(f"fail_.png")
         except Exception as e:
             logger.error("Fail to take screen-shot: {}".format(e))
 

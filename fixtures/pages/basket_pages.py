@@ -22,6 +22,6 @@ class BasketPage(BasePage):
 
     @staticmethod
     def get_description_hotel_in_basket(booked_hotels: list, amount: int):
-        ""
+        """Получаем из корзины описание элемента по порядковому номеру."""
         description = booked_hotels[amount-1].text
         return description

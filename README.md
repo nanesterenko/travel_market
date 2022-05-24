@@ -51,7 +51,15 @@ pytest
 
 #### Отчет через Allure: #### 
 
-[!] тут должен быть бейдж и описание
+Запуск тестов с генерацией данных для отчета
+```angular2html
+pytest --alluredir=allure_results
+```
+
+Подготовка отчета
+```angular2html
+allure serve allure_results
+```
 
 ---
 

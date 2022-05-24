@@ -18,7 +18,7 @@ class RegisterUserModel:
 
     @staticmethod
     def random():
-        user = f"{random.randint(10, 1000)}_{fake.first_name()}"
+        user = f"{fake.first_name()}{random.randint(10, 1000)}"
         email = f"{random.randint(100, 1000)}_{fake.email()}"
         password = fake.password()
         domain = fake.domain_name()
