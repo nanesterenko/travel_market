@@ -1,7 +1,7 @@
 ## Автоматизированное тестирование UI ##
 ### Сайт бронирования отелей https://cypress-tourism-app.herokuapp.com/ ###
 
-[!] тут должны быть бейджи CI
+[![CI Test Travel_Market](https://github.com/nanesterenko/travel_market/actions/workflows/test_travel_market.yml/badge.svg?branch=master)](https://github.com/nanesterenko/travel_market/actions/workflows/test_travel_market.yml)
 
 ---
 
@@ -45,7 +45,8 @@ pytest
 
 #### Тестовая документация ####
 
-[!] тут должен быть бейдж и описание
+Выполняемые тесты описаны в проекте через docstrings.
+Также описание подтягивается в отчет Allure
 
 ---
 
