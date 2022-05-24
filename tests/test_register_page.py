@@ -124,4 +124,3 @@ class TestRegisterPage:
         app.register_page.register_user(data=data)
         error_msg = app.register_page.get_event_text()
         assert error_msg == Notice.ERROR_INVALID_AGE
-
