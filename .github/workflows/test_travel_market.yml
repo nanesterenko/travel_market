@@ -35,7 +35,8 @@ jobs:
         run: mkdir output
         
       - name: Test with pytest
-        run: pytest --alluredir=allure_results
+        run: pytest --headless --alluredir=allure_results
+        continue-on-error: true
 
       - name: Collect Allure files and generate allure-report folder
         run: allure generate output/
