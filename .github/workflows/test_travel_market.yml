@@ -28,7 +28,10 @@ jobs:
         
       - name: Lint with flake8
         run: flake8 . --max-line-length=120 --statistics
+        continue-on-error: true
         
       - name: Test with pytest
-        run: pytest --headless
-        continue-on-error: true
+        run: pytest --headless --alluredir=allure_results
+
+      - name: Publishing Allure artifact to GitHub Actions
+        run: allure serve allure_results
