@@ -3,6 +3,8 @@
 
 [![CI Test Travel_Market](https://github.com/nanesterenko/travel_market/actions/workflows/test_travel_market.yml/badge.svg?branch=master)](https://github.com/nanesterenko/travel_market/actions/workflows/test_travel_market.yml)
 
+![TeamCity build status](http://188.120.227.87:8111/app/rest/builds/buildType:id:AntennaTravelMarket_Test/statusIcon.svg)
+
 ---
 
 #### Локальный запуск: ####
