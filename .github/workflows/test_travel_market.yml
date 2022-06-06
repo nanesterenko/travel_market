@@ -28,7 +28,8 @@ jobs:
         
       - name: Lint with flake8
         run: flake8 . --max-line-length=120 --statistics
+        continue-on-error: true
         
       - name: Test with pytest
         run: pytest --headless
-        continue-on-error: true
+        
