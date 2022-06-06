@@ -5,7 +5,6 @@ import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
-
 from fixtures.app import Application
 from models.register import RegisterUserModel
 

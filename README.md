@@ -2,7 +2,7 @@
 ### Сайт бронирования отелей https://cypress-tourism-app.herokuapp.com/ ###
 
 [![CI Test Travel_Market](https://github.com/nanesterenko/travel_market/actions/workflows/test_travel_market.yml/badge.svg?branch=master)](https://github.com/nanesterenko/travel_market/actions/workflows/test_travel_market.yml)
-
+![TeamCity build status](http://188.120.227.87:8111/app/rest/builds/buildType:id:AntennaTravelMarket_Test/statusIcon.svg)
 ---
 
 #### Локальный запуск: ####
@@ -64,3 +64,14 @@ allure serve allure_results
 
 ---
 
+#### Критерии проекта: #### 
+ 
+ - [x] Необходимо настроить CI. В проекте должен присутствовать файл настроек, который описывают логику взаимодействия с CI.
+
+ - [x] Необходимо настроить линтер (программа, которая проверяет код на соответствие стандартам в соответствии с определенным набором правил), который должен запускаться локально/на стороне CI
+
+ - [x] К каждому тесту должны присутствовать тест кейсы 
+
+ - [x] README.md заполнен и содержит актуальную информацию
+
+ - [x] В файле README.md стоят бейджики CI

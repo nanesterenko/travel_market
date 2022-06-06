@@ -1,6 +1,7 @@
 import logging
 from selenium.webdriver.common.by import By
 from fixtures.pages.base_pages import BasePage
+from models.register import RegisterUserModel
 
 logger = logging.getLogger("travel_market")
 
@@ -16,17 +17,20 @@ class RegisterPage(BasePage):
     AGE_INPUT = (By.ID, 'id_age')
     REGISTER_BUTTON = (By.XPATH, "//input[@value='register']")
     ERROR_MSG = (By.CLASS_NAME, 'errorlist')
+    AVATAR = (By.ID, "id_avatar")
 
     def open_register_page(self):
         self.open_site(self.app.url)
-        self.click(locator=self.LOGIN_SECTION)  # sign in в хедере
-        self.click(locator=self.REGISTER_SECTION)  # переход к регистрации
+        self.click(locator=self.LOGIN_SECTION)
+        self.click(locator=self.REGISTER_SECTION)
 
-    def register_user(self, data):
+    def register_user(self, data: RegisterUserModel, path: str = None):
         logger.info(f"Registered user with email {data.user} - {data.password_1}")
         self.fill(locator=self.USERNAME_INPUT, value=data.user)
         self.fill(locator=self.FIRST_NAME_INPUT, value=data.user)
         self.fill(locator=self.EMAIL_INPUT, value=data.email)
+        if path is not None:
+            self.upload_image(locator=self.AVATAR, path_to_file=path)
         self.clear(locator=self.AGE_INPUT)
         self.fill(locator=self.AGE_INPUT, value=data.age)
         self.fill(locator=self.PASSWORD_INPUT, value=data.password_1)

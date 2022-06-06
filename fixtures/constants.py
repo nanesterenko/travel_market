@@ -11,3 +11,5 @@ class Notice:
     ERROR_INVALID_EMAIL = "Enter a valid email address."
     ERROR_INVALID_AGE = "You are young!"
     ERROR_NON_EXIST_USER = "Please enter a correct username and password. Note that both fields may be case-sensitive."
+    ERROR_UPLOAD_AVATAR = "Upload a valid image. The file you uploaded was either not an image or a corrupted image."
+    ERROR_UPLOAD_EMPTY_FILE = "The submitted file is empty."
