@@ -36,21 +36,6 @@ class TestLoginPage:
         assert error_msg == Notice.ERROR_NON_EXIST_USER
 
     @allure.feature("login")
-    @allure.story("Ошибка при авторизации с пустым полем Username.")
-    def test_login_with_nonexistent_user(self, app):
-        """
-        1. Открыть страницу авторизации
-        2. Заполнить поля, кроме Username
-        3. Нажать кнопку авторизации
-        Ожидаемый результат: Отображается уведомление ""
-        """
-        app.login_page.open_login_page()
-        user = RegisterUserModel.random()
-        app.login_page.login_user(None, user.password_1)
-        error_msg = app.login_page.get_event_text()
-        assert error_msg == Notice.ERROR_NON_EXIST_USER
-
-    @allure.feature("login")
     @allure.story("Ошибка при авторизации с некорректным логином.")
     def test_login_with_incorrect_user(self, app, register_user):
         """

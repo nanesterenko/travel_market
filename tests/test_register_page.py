@@ -54,7 +54,7 @@ class TestRegisterPage:
         """
         app.register_page.open_register_page()
         data = RegisterUserModel.random()
-        app.register_page.register_user(data=data, path="file_for_tests\\invalid_avatar.txt")
+        app.register_page.register_user(data=data, path="file_for_tests/invalid_avatar.txt")
         error_msg = app.register_page.get_event_text()
         assert error_msg == Notice.ERROR_UPLOAD_AVATAR
 
@@ -68,7 +68,7 @@ class TestRegisterPage:
         """
         app.register_page.open_register_page()
         data = RegisterUserModel.random()
-        app.register_page.register_user(data=data, path="file_for_tests\\empty_file.txt")
+        app.register_page.register_user(data=data, path="file_for_tests/empty_file.txt")
         error_msg = app.register_page.get_event_text()
         assert error_msg == Notice.ERROR_UPLOAD_EMPTY_FILE
 
