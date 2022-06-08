@@ -35,7 +35,7 @@ class BasePage:
 
     @staticmethod
     def click_from_list(listing: list, number: int):
-        listing[number].click()
+        listing[number-1].click() #уменьшаем номер элемента,т.к. индекс с 0
 
     def fill(self, locator: object, value: str, wait_time=20):
         element = self._find_element(locator, wait_time)
